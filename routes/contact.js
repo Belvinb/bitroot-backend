@@ -3,6 +3,10 @@ const { addContact, getAllContacts, deleteContact, updateContact, searchContact,
 const {upload} = require("../utils/cloudinary")
 const router = express.Router()
 
+router.get("/",(req,res)=>{
+    res.send("bitroot_backend_test")
+    res.end()
+})
 
 //create new contact
 router.post("/addContact", upload.single("image"), addContact);
